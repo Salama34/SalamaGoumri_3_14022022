@@ -1,3 +1,5 @@
+@import 'main.scss';
+
 
 .box {
     box-sizing: border-box; /* Opera/IE 8+ */
@@ -28,6 +30,7 @@ header {
 }
 
 .localisation {
+    width: 100%;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -225,11 +228,12 @@ main {
     right: 20px;
     color: #9356DC;
     opacity: 0;
+
 }
 
-.coeur-plein:hover {
-    opacity: 100%;
-}
+
+
+
 .new {
     display: flex;
     align-items: center;
