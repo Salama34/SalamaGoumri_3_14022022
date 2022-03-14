@@ -14,6 +14,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items:  center;
+    background-color: white;
 }
 
 .logo {
@@ -53,18 +54,23 @@ h2 {
 
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
 .menu {
+    font-family: 'Roboto', sans-serif;
     background-color: white;
     height: 75px;
     margin: 15px;
     margin-top: 0;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 7px 7px 7px rgba(0,0,0,0.1);
-    
+    display: flex;
+    overflow: hidden;
 }
 
 .span-1 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 18px;
     display: inline-block;
@@ -74,12 +80,50 @@ h2 {
 }
 
 .span-2 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     display: inline;
     margin-left: 10px;
 }
+
+.prix {
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 45px;
+    font-weight: 500;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    border-radius: 0 20px 20px 0;
+    margin-right: -4rem;
+    width: 4rem;
+    transition: all 0.7s;
+}
+
+.menu:hover .check {
+    margin-right: 0;
+}
+
+.fa-circle-check {
+    color: white;
+    animation-name: btn-check;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+}
+
+@keyframes btn-check {
+    0% {
+        transform: rotate(-270deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+
 
 .bouton-1 {
     width: 200px;
@@ -91,11 +135,15 @@ h2 {
     border: none;
     border-bottom-right-radius: solid 2px #9356DC ;
     border-top-left-radius: solid 2px #FF79DA;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
     background: linear-gradient(to bottom right,#FF79DA,#9356DC );
     color: white;
     font-family: 'Roboto', sans-serif;
    
+}
+
+.bouton-1:hover {
+    box-shadow: 10px 10px 10px 2px rgba(0,0,0,0.25);
 }
 
 footer {
@@ -124,4 +172,41 @@ li {
     font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
+}
+
+
+
+@media (min-width: 992px) {
+
+.img_head {
+    height: 500px;
+}
+main {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1 {
+    margin-left: 5%;
+}
+
+.contenu {
+ display: flex;
+ flex-direction: row;
+ margin-left: 50px;
+ margin-right: 50px;
+}
+
+.menu {
+    padding: 5px;
+    padding-right: 15px;
+    width: 100%;
+    
+}
+
+.categories {
+    width: 35%;
+    margin-left: 10px;
+    margin-right: 40px;
+}
 }
