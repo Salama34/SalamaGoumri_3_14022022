@@ -18,7 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    opacity: 0.7;
+    opacity: 1;
     height: 100%;
     inset: 0;
     animation: loader .01s;
@@ -28,16 +28,14 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: running;
-    animation-delay: 0.6s;
-    z-index: 1;
+    animation-delay: 2s;
+    z-index: 5;
+
 }
-
-
-
 
 @keyframes loader {
     0% {
-        opacity: 0.8;
+        opacity: 1;
     
     }
 
@@ -47,63 +45,35 @@ body {
     }
 }
 
-.fa-champagne-glasses {
-    margin: 20px;
-}
 
 .load-1 {
-color: #9356DC;
-opacity: 0;
-animation-name: load-1;
-animation-duration: 0.7s;
-
-
+    font-family: 'Shrikhand', cursive;
+    font-size: 75px;
+    color: #9356DC;
+    animation-name: load-1;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 }
 
-.load-2 {
-    color: #99e2d0;
-    opacity: 0;
-    animation-name: load-2;
-    animation-duration: 0.7s;
-    animation-delay: 0.3s;
-}
-
-.load-3 {
-    color: #FF79DA;
-    opacity: 0;
-    animation-name: load-3;
-    animation-duration: 0.7s;
-    animation-delay: 0.6s;
-}
 
 @keyframes load-1 {
-    0% {
+    0% {color: #FF79DA;
         opacity: 1;
-
-    }
-    100% {
-        opacity: 0;
+        }
         
+    50% {color: #99e2d0;
+    transform: scale(1.5);}
+
+    85% {color: #9356DC;
     }
+
+    100% {
+    opacity: 0;
 }
 
-@keyframes load-2 {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        
-    }
-}
-@keyframes load-3 {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        
-    }
 }
 
 header {
@@ -323,6 +293,8 @@ main {
     top: 50%;
     right: 20px;
     
+    
+    
 }
 
 .coeur-plein {
@@ -333,18 +305,12 @@ main {
 }
 
 .coeur-plein:hover {
-    opacity: 1;
-    transition: 0.5s;
     color: #d54eb0;
-    transition: 0.5s;
-    /*
-    background-clip: text;
-    background:linear-gradient(#FF79DA,#9356DC); background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    */
-    
+    transition: 1s;
+    opacity: 1;
 }
+
+
 
 .new {
     display: flex;
